@@ -1,0 +1,14 @@
+[project]
+name = "tiny-email-message-id"
+version = "0.1.0"
+description = "Generates RFC 5322 compliant Message-ID header values using cryptographic randomness and an injectable clock"
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
