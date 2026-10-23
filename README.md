@@ -38,6 +38,13 @@ The trade-off: the local part is opaque base32. It is not human-meaningful. If y
 - `generate() -> str` — returns a `"<local@domain>"` string.
 - `domain` — read-only property returning the configured id-right.
 
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
+
 ## License
 
 MIT.
