@@ -45,6 +45,12 @@ sums drift with floating point over long streams, and recomputing from a small
 buffer is cheap enough that the drift is not worth the speed.
 
 
+## Limitations
+
+Values are coerced to floats, so very large integers lose precision. If you need
+exact integer aggregates over a window, this is the wrong tool.
+
+
 ## License
 
 MIT.
